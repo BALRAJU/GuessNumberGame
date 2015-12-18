@@ -15,9 +15,9 @@ public class GuessNumber {
 	private static final String EQUAL = "equal";
 	private static final double _0_5 = 0.5;
 	private static List<String>  inputList = new ArrayList<String>();
-	private int guessnumber = 0;
+	private int guessNumber = 0;
 	    //Total guesses taken
-	private int guessestaken = 0;
+	private int guessesTaken = 0;
 	
 	
 	//static block to intialize the valid inputs
@@ -39,24 +39,24 @@ public class GuessNumber {
 		String ready = getUserInput();
 		if(ready.equalsIgnoreCase(REAADY)){
 			//Assign a new random number to guessnumber
-			guessnumber = generateNewNumber();
+			guessNumber = generateNewNumber();
 			String userInputString = null;
 			do {
-				guessestaken++;
+				guessesTaken++;
 				// Get the user input whilst guess is wrong
-				System.out.println("is your nuber " + guessnumber);
+				System.out.println("is your nuber " + guessNumber);
 				userInputString = getUserInput();
 				if(userInputString.equalsIgnoreCase(HIGHER)){
-					min = guessnumber;
+					min = guessNumber;
 					//guessnumber = generateNewNumber();
 				}else if(userInputString.equalsIgnoreCase(LOWER)){
-					max = guessnumber;
+					max = guessNumber;
 					//guessnumber = generateNewNumber();
 				}
-				guessnumber = generateNewNumber();
+				guessNumber = generateNewNumber();
 				//Check user input
 			} while (!userInputString.equals(EQUAL));
-			System.out.println("congrats, we guessed your number in "+guessestaken +" attempts , and your number is " + guessnumber);
+			System.out.println("congrats, we guessed your number in "+guessesTaken +" attempts , and your number is " + guessNumber);
 		}else{
 			guessUserNumber(); //recursive call to make sure user enters ready
 		}
