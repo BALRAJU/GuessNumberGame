@@ -38,7 +38,7 @@ public class GuessNumber {
 		System.out.println("say ready when you are ready");
 		String ready = getUserInput();
 		if(ready.equalsIgnoreCase(REAADY)){
-			//Assign a new random number to guessnumber
+			//Assign a new random number to guessNumber
 			guessNumber = generateNewNumber();
 			String userInputString = null;
 			do {
@@ -47,9 +47,9 @@ public class GuessNumber {
 				System.out.println("is your nuber " + guessNumber);
 				userInputString = getUserInput();
 				if(userInputString.equalsIgnoreCase(HIGHER)){
-					min = guessNumber;
+					this.min = guessNumber; //updating the minumum number to the current guessed number since the user guessed number is higher than guessNumber
 				}else if(userInputString.equalsIgnoreCase(LOWER)){
-					max = guessNumber;
+					this.max = guessNumber;//updating the maxumum number to the current guessed number since the user guessed number is lower than guessNumber
 				}
 				guessNumber = generateNewNumber();
 				//Check user input
