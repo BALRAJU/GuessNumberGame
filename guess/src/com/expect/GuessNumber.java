@@ -34,7 +34,7 @@ public class GuessNumber {
 		this.max = max;
 	}
 	
-	public void GuessUserNumber() {
+	public void guessUserNumber() {
 		System.out.println("say ready when you are ready");
 		String ready = getUserInput();
 		if(ready.equalsIgnoreCase(REAADY)){
@@ -58,7 +58,7 @@ public class GuessNumber {
 			} while (!userInputString.equals(EQUAL));
 			System.out.println("congrats, we guessed your number in "+guessestaken +" attempts , and your number is " + guessnumber);
 		}else{
-			GuessUserNumber(); //recursive call to make sure user enters ready
+			guessUserNumber(); //recursive call to make sure user enters ready
 		}
 	}
     // Gets an integer value from user
