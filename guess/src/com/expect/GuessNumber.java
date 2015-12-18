@@ -48,10 +48,8 @@ public class GuessNumber {
 				userInputString = getUserInput();
 				if(userInputString.equalsIgnoreCase(HIGHER)){
 					min = guessNumber;
-					//guessnumber = generateNewNumber();
 				}else if(userInputString.equalsIgnoreCase(LOWER)){
 					max = guessNumber;
-					//guessnumber = generateNewNumber();
 				}
 				guessNumber = generateNewNumber();
 				//Check user input
